@@ -1,86 +1,58 @@
-\chapter{Analysis and specification of requirements}
+\chapter{Designing the SoC}
 \minitoc
 \newpage
 
 \setcounter{secnumdepth}{0} % Set the section counter to 0 so next section is not counted in toc
 % ----------------------- Introduction ----------------------- %
 \section{Introduction}
-In this chapter, we are going to analyze the various specifications and requirements of the whole project from development to production.
-We will also describe the product's main features and the conception that should be met for the end result.
+This chapter will delve into the design of the Security Operation Center (SoC).
+We will discuss the requirements analysis, architectural design, integration with existing systems as well as training and skills development.
 
 \setcounter{secnumdepth}{2} % Resume counting the sections for the toc with a depth of 2 (Sections and sub-sections)
 % ----------------------------------- SECTIONS (v) ----------------------------------- %
-% ----------------------- Functional Requirements ----------------------- %
-\section{Functional requirements}
-Since our project is fairly voluminous, we identify what we consider the necessities for our app as follows:
+% ----------------------- Requirements Analysis ----------------------- %
+\section{Requirements Analysis}
+In this section, practical methodologies and tools for conducting a requirement analysis should be discussed, including stakeholder interviews, surveys, and risk assessments.
+Real-world examples of common cybersecurity needs and objectives are usually provided to inform the design of the SoC effectively.
+
+For this academic project would be to design a very simple SoC for educational purposes and will have the following requirements:
 \begin{itemize}
-    \item Doing something practical.
-    \item Doing another thing.
-    \item Creating some items.
-    \item Creating individual docker files for all microservices based on what they require.
+    \item Monitor network traffic for suspicious activities.
+    \item Detect and respond to security incidents.
+    \item Provide real-time alerts and notifications.
+    \item Maintain logs and records of security events.
+    \item Ensure compliance with industry standards and regulations.
 \end{itemize}
 
-\subsection{Application dashboard}
+% ----------------------- Architectural Design ----------------------- %
+\section{Architectural Design}
+Careful considerations for scalability, flexibility, and cost-effectiveness, the architectural design of the SoC should be explored.
+The design should include the hardware and software components, as well as the network infrastructure and data storage requirements.
 
-\subsubsection*{\underline{Use case}}
-\begin{figure}[H]
-    \centering
-    \makebox[\textwidth]{\includegraphics[width=\linewidth]{src/assets/diagrams/usecase.png}}
-    \caption{Use case diagram for the frontend dashboard}
-    \label{fig:use-case-diagram}
-\end{figure}
+Here's a high-level overview of the SoC architecture that we will be implementing:
 
-\subsubsection{\underline{Use case textual description}}
-Here is an example of the textual description of one of the use cases scenarios:
-\begin{table}[H]
-    \renewcommand{\arraystretch}{1.5}%
-    \caption{Create Campaign's use case textual description}
-    \centering
-    \medskip
-    \begin{tabularx}{1\textwidth} {
-            | >{\hsize=0.5\hsize\linewidth=\hsize\centering\arraybackslash}X
-            | >{\hsize=1.5\hsize\linewidth=\hsize\justifying\arraybackslash}X |}
-        \hline
-        \textbf {Use Case}         & \noindent Create Campaign                                                                                                              \\
-        \hline
-        \textbf {Actor}            & \noindent User.                                                                                                                        \\
-        \hline
-        \textbf {Pre-condition}    & \noindent Authenticated User.                                                                                                          \\
-        \hline
-        \textbf {Post-condition}   & \noindent Campaign Created.                                                                                                            \\
-        \hline
-        \textbf {Basic path}       & \noindent    \begin{enumerate}
-            \item Navigate to campaign page.
-            \item Click on the "create campaign" button.
-            \item Fill in the needed information of the campaign in the popped modal form.
-            \item Validate the form then submit.
-        \end{enumerate}                                                                                                 \\
-        \hline
-        \textbf {Exceptional path} & \noindent On step 3, if the campaign sales navigator link is not valid, show "invalid campaign link" to the user and restart the step. \\
-        \hline
-    \end{tabularx}
-\end{table}
+% TODO: Add a diagram of the SoC architecture
 
-% ----------------------- Conception ----------------------- %
-\section{Conception}
-In this section, we will dive deep into the conception and the logic behind the parts of the application:
+% ----------------------- Integration with Existing Systems ----------------------- %
+\section{Integration with Existing Systems}
 
-% --------------- Non functional Requirements --------------- %
-\section{Non-functional requirements}
-Non functional requirements describe any specification that does not add direct business value but is nonetheless crucial for the good operation of a developed software.
-For our app, what we should focus on is:
-\begin{itemize}
-    \item \textbf{Reliability and Availability:} The software should be available 24 hours a day and 7 days a week.
-    \item \textbf{Security:} Clients should be able to safely login to the dashboard with a strong authentication system.
-    \item \textbf{Maintainability and Recoverability:} We should respond to LinkedIn changes all the time as fast as possible.
-    \item \textbf{Scalability:} This is the main reason we're migrating to a new architecture in the first place.
-    \item \textbf{Documentation:} We should always document each and every step we make extensively so that new developers can onboard on the project in a fast and efficient way, which further emphasizes reliability.
-\end{itemize}
+Since implementing a SoC involves integrating with existing systems and processes, this section is about the challenges and best practices for seamless integration.
+
+In our case, we will emulate a network environment with multiple endpoints, servers, and network devices to demonstrate the integration of the \glsxtrshort{soc}.
+
+% ----------------------- Training and Skills Development ----------------------- %
+\section{Training and Skills Development}
+
+As is the case in every cybersecurity operation, training and skills development are crucial for the good operations of the \glsxtrshort{soc}.
+
+This can include training on security tools, incident response procedures, threat intelligence analysis, and compliance requirements.
+
 % ----------------------------------- SECTIONS (^) ----------------------------------- %
 
 \setcounter{secnumdepth}{0} % Set the section counter to 0 so next section is not counted in toc
 % ----------------------- Conclusion ----------------------- %
 \section{Conclusion}
-In this chapter, we discussed our main objectives that we should meet during the course of our internship.
-We also discuss the various layers and services of the application.
-In what follows, we will discuss the realization part with heavy focus on DevOps and the actual implementation of the new architecture.
+In this chapter, we have explored the various aspects of designing a \glsxtrlong{soc}.
+First, we discussed the importance of requirements analysis, then we stressed the significance of architectural design, followed by the challenges of integrating with existing systems, and finally, we highlighted the importance of training and skills development.
+
+The next chapter will focus on the actual implementation, where we will put our design into practice and demonstrate the functionality of the \glsxtrshort{soc} in an emulated environment.

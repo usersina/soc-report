@@ -9,5 +9,8 @@
   "latex-workshop.message.badbox.show": false,
   "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.synctex.afterBuild.enabled": true,
-  "latex-workshop.latex.autoBuild.run": "onSave"
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "cSpell.enableFiletypes": ["latex"],
+  "spellright.language": ["en-US-10-1."],
+  "spellright.documentTypes": ["markdown", "latex", "plaintext"]
 }
