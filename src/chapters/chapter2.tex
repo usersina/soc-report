@@ -41,28 +41,33 @@ When considering the implementation of a SoC, organizations must weigh various f
 
 \subsection{Comparing: In-house SoC vs MSSPs}
 One important consideration is whether to build and operate an in-house SoC or outsource these capabilities to a managed security service provider (MSSP).
-\begin{table}[H]
-    \renewcommand{\arraystretch}{1.5}%
-    \caption{Comparison of In-house SoCs and Managed Security Service Providers (MSSPs)}
-    \centering
-    \medskip
-    \begin{tabularx}{1\textwidth} {
-            | >{\hsize=.7\hsize\linewidth=\hsize\centering\arraybackslash}X
-            | >{\hsize=1.15\hsize\linewidth=\hsize\justifying\arraybackslash}X
-            | >{\hsize=1.15\hsize\linewidth=\hsize\justifying\arraybackslash}X |}
-        \hline
-        \rowcolor{primary}                 & \textbf{In-house SoCs}                                                                                                                                                                           & \textbf{MSSPs}                                                                                                                                                  \\
-        \hline
-        \textbf{Control and Customization} & Offer greater control and customization over security operations and infrastructure, allowing organizations to tailor SoC capabilities to their specific needs.                                  & Provide access to specialized skills and technologies, enabling organizations to leverage external expertise for comprehensive security solutions.              \\
-        \hline
-        \textbf{Resource and Expertise}    & Require significant investment in resources and expertise for setup, maintenance, and operation of in-house SoCs.                                                                                & Offload the operational burden to a third-party MSSP, eliminating the need for internal resources and expertise dedicated to SoC operations.                    \\
-        \hline
-        \textbf{Architectural Approach}    & Organizations must decide on the architectural approach for their SoC, choosing between centralized and distributed architectures based on factors such as scalability, resilience, and latency. & MSSPs typically offer centralized SoC architectures, simplifying management and ensuring consistent security policies across the organization's infrastructure. \\
-        \hline
-        \textbf{Tools and Platforms}       & Organizations have the flexibility to choose between commercial and open-source tools and platforms, based on factors such as functionality, cost, and support.                                  & MSSPs may have preferred tools and platforms, offering standardized solutions with fixed feature sets and pricing models.                                       \\
-        \hline
-    \end{tabularx}
-\end{table}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{longtable}{|p{0.2\textwidth}|p{0.4\textwidth}|p{0.4\textwidth}|}
+    \caption{In-house SoCs vs Managed Security Service Providers (MSSPs)}                                                                                                                                                                                                                                                                                                                                   \\
+    \hline
+    \rowcolor{primary}                 & \centering\arraybackslash\centering\arraybackslash\textbf{In-house SoCs}                                                                                                                         & \centering\arraybackslash\textbf{MSSPs}                                                                                                                         \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}%
+    {\tablename\ \thetable\ -- \textit{Continued from previous page}}                                                                                                                                                                                                                                                                                                                                       \\
+    \hline
+    \rowcolor{primary}                 & \centering\arraybackslash\centering\arraybackslash\textbf{In-house SoCs}                                                                                                                         & \centering\arraybackslash\textbf{MSSPs}                                                                                                                         \\
+    \hline
+    \endhead
+    \hline \multicolumn{3}{r}{\textit{Continued on next page}}                                                                                                                                                                                                                                                                                                                                              \\
+    \endfoot
+    \hline
+    \endlastfoot
+    \textbf{Control and Customization} & Offer greater control and customization over security operations and infrastructure, allowing organizations to tailor SoC capabilities to their specific needs.                                  & Provide access to specialized skills and technologies, enabling organizations to leverage external expertise for comprehensive security solutions.              \\
+    \hline
+    \textbf{Resource and Expertise}    & Require significant investment in resources and expertise for setup, maintenance, and operation of in-house SoCs.                                                                                & Offload the operational burden to a third-party MSSP, eliminating the need for internal resources and expertise dedicated to SoC operations.                    \\
+    \hline
+    \textbf{Architectural Approach}    & Organizations must decide on the architectural approach for their SoC, choosing between centralized and distributed architectures based on factors such as scalability, resilience, and latency. & MSSPs typically offer centralized SoC architectures, simplifying management and ensuring consistent security policies across the organization's infrastructure. \\
+    \hline
+    \textbf{Tools and Platforms}       & Organizations have the flexibility to choose between commercial and open-source tools and platforms, based on factors such as functionality, cost, and support.                                  & MSSPs may have preferred tools and platforms, offering standardized solutions with fixed feature sets and pricing models.                                       \\
+    \hline
+\end{longtable}
 
 In the end, both in-house SoCs and MSSPs have their advantages and challenges.
 In our case, we will be implementing an in-house SoC since it is easier to implement in the context of our project.
