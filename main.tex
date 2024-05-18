@@ -9,6 +9,13 @@
 % Redefine the chaptermark (chapter title in every page)
 \renewcommand{\chaptermark}[1]{\markboth{\fontsize{11}{12}\selectfont \MakeUppercase{Chapter \thechapter: #1}}{}}
 
+% Redefine the chapter title format
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+% Redefine the space before and after the chapter titles
+\titlespacing*{\chapter}{0pt}{-50pt}{40pt}
+
 % Glossary for acronyms
 \input{./src/components/glossary.tex}
 
@@ -43,8 +50,10 @@
 % Set page numbering to Arabic for main content
 \pagenumbering{arabic}
 
-% Include the main app
+% Include the main app, reset the title spacing for the app chapters only
+\titlespacing*{\chapter}{0pt}{20pt}{40pt}
 \input{src/app.tex}
+\titlespacing*{\chapter}{0pt}{-50pt}{40pt}
 
 % Generate a webography, for more styles
 % see - https://www.overleaf.com/learn/latex/Bibtex_bibliography_styles#Table_of_stylename_values
