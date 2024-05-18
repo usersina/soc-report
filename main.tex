@@ -19,9 +19,6 @@
 % \input{src/components/dedications.tex} % Optional
 \input{src/components/acknowledgments.tex}
 
-% Abstract or TL;DR
-\input{src/components/abstract.tex}
-
 % Print the acronyms list
 \printunsrtglossaries
 \newpage
@@ -53,6 +50,13 @@
 
 % Very big diagrams, pictures or schemas go here
 % \input{src/components/appendices.tex}
+
+% Remove page numbering for abstract
+\pagenumbering{gobble}
+
+% Abstract or TL;DR
+\newcommand{\nocontentsline}[1]{}
+\input{src/components/abstract.tex}
 
 \end{document}
 % ------------- Document content ------------- %
