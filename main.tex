@@ -6,15 +6,8 @@
 % Main packages
 \input{./package.tex}
 
-% Redefine the chaptermark (chapter title in every page)
-\renewcommand{\chaptermark}[1]{\markboth{\fontsize{11}{12}\selectfont \MakeUppercase{Chapter \thechapter: #1}}{}}
-
-% Redefine the chapter title format
-\titleformat{\chapter}[display]
-  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
-
-% Redefine the space before and after the chapter titles
-\titlespacing*{\chapter}{0pt}{-50pt}{40pt}
+% Global configuration
+\input{./src/config/pre-doc.tex}
 
 % Glossary for acronyms
 \input{./src/components/glossary.tex}
@@ -22,8 +15,8 @@
 % ------------- Document content ------------- %
 \begin{document}
 
-% Global config
-\input{./config.tex}
+% In-document configuration
+\input{./src/config/in-doc.tex}
 
 % Include the cover page
 \includepdf[]{src/assets/pdfs/cover-page.pdf}

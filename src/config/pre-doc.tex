@@ -1,0 +1,18 @@
+% Indent subsection title by adding space before it
+% https://www.developpez.net/forums/d1762803/autres-langages/autres-langages/latex/mise-forme/indentation-sections-sous-sections/
+\makeatletter
+\renewcommand\subsection{\@startsection{subsection}{2}{0.5pc} % order of classification and offset
+  {1cm \@plus -1ex \@minus -.2ex} % space that will be added above the title
+  {2.3ex \@plus .2ex} % space that will be added below the title. inline if negative
+  {\reset@font\large\bfseries}}
+\makeatother
+
+% Redefine the chaptermark (chapter title in every page)
+\renewcommand{\chaptermark}[1]{\markboth{\fontsize{11}{12}\selectfont \MakeUppercase{Chapter \thechapter: #1}}{}}
+
+% Redefine the chapter title format
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+% Redefine the space before and after the chapter titles
+\titlespacing*{\chapter}{0pt}{-50pt}{40pt}
